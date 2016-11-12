@@ -1162,6 +1162,16 @@ img {
   max-width: 250px; 
   max-height: 250px;
 }
+#educpic {
+  height: auto; 
+  width: auto; 
+  max-width: 175px; 
+  max-height: 175px;
+  margin-right: 10px;
+  margin-left: 10px;
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
 
 #intro{
   margin-right: 10px;
@@ -5492,6 +5502,8 @@ button.list-group-item-danger.active:focus {
   color: inherit;
 }
 .panel-title {
+  margin-left:10px;
+  margin-right: 10px;
   margin-top: 0;
   margin-bottom: 0;
   font-size: 16px;
