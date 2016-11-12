@@ -1162,6 +1162,10 @@ img {
   max-width: 250px; 
   max-height: 250px;
 }
+#skill {
+  width: 200px; 
+  height: 200px;
+}
 #educpic {
   height: auto; 
   width: auto; 
