@@ -1,5 +1,10 @@
 <!DOCTYPE html>
 <html>
+<meta charset="UTF-8">
+<meta name="description" content="Guillaume Courtet's website">
+<meta name="keywords" content="Guillaume, Courtet, Resume, Website, INSA, Rennes, student, engineer">
+<meta name="author" content="Guillaume Courtet">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
 <head>
   <title>Guillaume Courtet - Welcome </title>
@@ -71,6 +76,14 @@
           </li>
         </ul>
         <ul class="nav navbar-nav navbar-right">
+          <li>
+            <a href="mailto:guillaume.courtet@hotmail.fr">
+              <div>
+                <span class="glyphicon glyphicon-envelope" aria-hidden="true"></span>
+                <span class="sr-only">Contact me</span>
+              </div>
+            </a>
+          </li>
           <li class="dropdown">
             <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="true">Language <span class="caret"></span></a>
             <ul class="dropdown-menu">
@@ -82,17 +95,17 @@
       </div><!-- /.navbar-collapse -->
     </div><!-- /.container-fluid -->
   </nav>
-  <div class="panel panel-default">
-  <img class ="img-circle img-responsive center-block text-justify pull-right" src="../data/meti.png" id="educpic">
+  <div class="panel panel-default case">
+    <img class ="img-circle img-responsive center-block text-justify pull-right" src="../data/meti.png" id="educpic">
     <div class="panel-title">
-    <h3>Intern at METI Software & Services (2015)<small> Larmor-Plage, France</small></h3>
+      <h3>Intern at METI Software & Services (2015)<small> Larmor-Plage, France</small></h3>
     </div>
     <div class="clearfix">
       <p><div class="panel-body text-justify">During my month with METI, I've had the opportunity to disover the <strong>evolution of a project</strong> inside a company from scratch to a complete product. I was navigating from one service to another in order to really get an idea of what it is like to work on a project inside a company. By doing so, I was able to learn a lot of very interesting things on different aspects of a project : <strong>development</strong>, <strong>validation</strong>, <strong>schedule management</strong> and finally <strong>support</strong>. My internship at METI was a great experience and I look forward to my next internship.
       </div></p>
     </div>
   </div>
-  <div class="panel panel-default">
+  <div class="panel panel-default case">
     <div class="panel-title">
       <h3>Summer job at E.Leclerc (Summer 2015 & 2016)<small> Lanester, France</small></h3>
     </div>
@@ -101,7 +114,7 @@
       </div></p>
     </div>
   </div>
-  <div class="panel panel-default">
+  <div class="panel panel-default case">
     <img class ="img-circle img-responsive center-block text-justify pull-right" src="../data/ffbb.png" id="educpic">
     <div class="panel-title">
       <h3>Referee for the French Basketball Federation (2010-2013)<small> Morbihan, France</small></h3>
@@ -118,4 +131,18 @@
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
 <!-- Include all compiled plugins (below), or include individual files as needed -->
 <script src="../js/bootstrap.min.js"></script>
+<script>
+  var originalColors = [];
+
+// Changes color on hover
+$(function() {
+  $('.case').hover(function(){
+    originalColors[$(this).index('.case')] = $(this).css('background-color');
+    $(this).css('background-color', '#f0f0f0');
+  },
+  function(){
+   $(this).css('background-color', originalColors[$(this).index('.case')]);
+ });
+});
+</script>
 </html>

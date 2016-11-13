@@ -1,5 +1,10 @@
 <!DOCTYPE html>
 <html>
+<meta charset="UTF-8">
+<meta name="description" content="Guillaume Courtet's website">
+<meta name="keywords" content="Guillaume, Courtet, Resume, Website, INSA, Rennes, student, engineer">
+<meta name="author" content="Guillaume Courtet">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
 <head>
   <title>Guillaume Courtet - Welcome </title>
@@ -71,6 +76,14 @@
        </li>
      </ul>
      <ul class="nav navbar-nav navbar-right">
+       <li>
+        <a href="mailto:guillaume.courtet@hotmail.fr">
+          <div>
+            <span class="glyphicon glyphicon-envelope" aria-hidden="true"></span>
+            <span class="sr-only">Contact me</span>
+          </div>
+        </a>
+      </li>
       <li class="dropdown">
         <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="true">Language <span class="caret"></span></a>
         <ul class="dropdown-menu">
@@ -82,33 +95,33 @@
   </div><!-- /.navbar-collapse -->
 </div><!-- /.container-fluid -->
 </nav>
-<div class="panel panel-default">
-    <img class ="img-circle img-responsive center-block text-justify pull-right" src="../data/insa.png" id="educpic">
+<div class="panel panel-default case">
+  <img class ="img-circle img-responsive center-block text-justify pull-right" src="../data/insa.png" id="educpic">
   <div class="panel-title">
     <h3>Software engineering student, 3rd year (2014-current)<small> INSA Rennes, France</small></h3>
   </div>
   <div class="clearfix">
-  <p><div class="panel-body text-justify">I am now studying <strong>software engineering</strong> at INSA Rennes - a school member of the INSA Group, the leading French network of state graduate and post graduate engineering schools. I am currently enrolled in my third year there and I'm having a lot of fun (yes, I do think that learning is fun) ! I really enjoy learning new things everyday and getting to apply them in <strong>projects</strong>. However I am also eager to discover things on my own so I'm trying to learn things by myself too. In addition to my courses, I am taking part in two projects :<br>
-    - I am an <strong>iOS developer</strong> for the INSAPP, an application dedicated to student life at INSA Rennes<br>
-    - I am organising a tournament for the <strong>InsaLan</strong>, a lan-party organised every year at INSA Rennes</li>
-  
-  </div></p>
+    <p><div class="panel-body text-justify">I am now studying <strong>software engineering</strong> at INSA Rennes - a school member of the INSA Group, the leading French network of state graduate and post graduate engineering schools. I am currently enrolled in my third year there and I'm having a lot of fun (yes, I do think that learning is fun) ! I really enjoy learning new things everyday and getting to apply them in <strong>projects</strong>. However I am also eager to discover things on my own so I'm trying to learn things by myself too. In addition to my courses, I am taking part in two projects :<br>
+      - I am an <strong>iOS developer</strong> for the INSAPP, an application dedicated to student life at INSA Rennes<br>
+      - I am organising a tournament for the <strong>InsaLan</strong>, a lan-party organised every year at INSA Rennes</li>
+      
+    </div></p>
+  </div>
 </div>
-</div>
-<div class="panel panel-default">
-    <img class ="img-circle img-responsive center-block text-justify pull-right" src="../data/graduation.png" id="educpic">
+<div class="panel panel-default case">
+  <img class ="img-circle img-responsive center-block text-justify pull-right" src="../data/graduation.png" id="educpic">
   <div class="panel-title">
     <h3>Exchange student, Patrician Academy (2013-2014)<small> Butler, AL. USA</small></h3>
   </div>
   <div class="clearfix">
-  <p><div class="panel-body text-justify">After finishing high school in France, I still wasn't very sure of what to do next. That is the reason why, after thinking about ir for quite a long time, I decided to cross the ocean and to become an <strong>exchange student</strong> for a year in the United States. During 10 months, I have been studying like an <strong>American high school student</strong> and living one of my dreams. It wasn't always simple : being that far from your family and friends can be hard sometimes. However I was very lucky to be surrounded by amazing people who have been extraordinary helpful. I was living in Butler, Alabama and was studying at Patrician Academy. This experience helped me become more <strong>independent</strong>, <strong>open-minded</strong>, discover how to deal with problems (and people) on my own and obviously significantly improve my <strong>English</strong>. After 10 months I <strong>graduated</strong> from my school and it was time for me to leave the new life I had built there. Even if it was extremely difficult, I was ready and excited to start the next chapter of my life...<br>
-  Achievements :<br>
-   - Advanced Honors Diploma (4.25 GPA)<br>
-   - Member of the <strong>National Beta Club</strong> and <strong>National Honor Society</strong>
+    <p><div class="panel-body text-justify">After finishing high school in France, I still wasn't very sure of what to do next. That is the reason why, after thinking about ir for quite a long time, I decided to cross the ocean and to become an <strong>exchange student</strong> for a year in the United States. During 10 months, I have been studying like an <strong>American high school student</strong> and living one of my dreams. It wasn't always simple : being that far from your family and friends can be hard sometimes. However I was very lucky to be surrounded by amazing people who have been extraordinary helpful. I was living in Butler, Alabama and was studying at Patrician Academy. This experience helped me become more <strong>independent</strong>, <strong>open-minded</strong>, discover how to deal with problems (and people) on my own and obviously significantly improve my <strong>English</strong>. After 10 months I <strong>graduated</strong> from my school and it was time for me to leave the new life I had built there. Even if it was extremely difficult, I was ready and excited to start the next chapter of my life...<br>
+      Achievements :<br>
+      - Advanced Honors Diploma (4.25 GPA)<br>
+      - Member of the <strong>National Beta Club</strong> and <strong>National Honor Society</strong>
     </div></p>
   </div>
 </div>
-<div class="panel panel-default">
+<div class="panel panel-default case">
   <div class="panel-title">
     <h3>Lyc&eacute;e Jean Mac&eacute; (2010-2013)<small> Lanester, France</small></h3>
   </div>
@@ -124,4 +137,18 @@
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
 <!-- Include all compiled plugins (below), or include individual files as needed -->
 <script src="../js/bootstrap.min.js"></script>
+<script>
+  var originalColors = [];
+
+// Changes color on hover
+$(function() {
+  $('.case').hover(function(){
+    originalColors[$(this).index('.case')] = $(this).css('background-color');
+    $(this).css('background-color', '#f0f0f0');
+  },
+  function(){
+   $(this).css('background-color', originalColors[$(this).index('.case')]);
+ });
+});
+</script>
 </html>

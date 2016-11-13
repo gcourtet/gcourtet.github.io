@@ -1,5 +1,10 @@
 <!DOCTYPE html>
 <html>
+<meta charset="UTF-8">
+<meta name="description" content="Guillaume Courtet's website">
+<meta name="keywords" content="Guillaume, Courtet, Resume, Website, INSA, Rennes, student, engineer">
+<meta name="author" content="Guillaume Courtet">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
 <head>
   <title>Guillaume Courtet - Welcome </title>
@@ -71,6 +76,14 @@
           </li>
         </ul>
         <ul class="nav navbar-nav navbar-right">
+          <li>
+            <a href="mailto:guillaume.courtet@hotmail.fr">
+              <div>
+                <span class="glyphicon glyphicon-envelope" aria-hidden="true"></span>
+                <span class="sr-only">Contact me</span>
+              </div>
+            </a>
+          </li>
           <li class="dropdown">
             <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="true">Language <span class="caret"></span></a>
             <ul class="dropdown-menu">
@@ -82,8 +95,8 @@
       </div><!-- /.navbar-collapse -->
     </div><!-- /.container-fluid -->
   </nav>
-  <div class="panel panel-default">
-      <img class ="img-circle img-responsive center-block text-justify pull-right" src="../data/basketball.png" id="educpic">
+  <div class="panel panel-default case">
+    <img class ="img-circle img-responsive center-block text-justify pull-right" src="../data/basketball.png" id="educpic">
     <div class="panel-title">
       <h3>Sports</h3>
     </div>
@@ -92,8 +105,8 @@
       </div></p>
     </div>
   </div>
-  <div class="panel panel-default">
-      <img class ="img-circle img-responsive center-block text-justify pull-left" src="../data/harlem.png" id="educpic">
+  <div class="panel panel-default case">
+    <img class ="img-circle img-responsive center-block text-justify pull-left" src="../data/harlem.png" id="educpic">
     <div class="panel-title">
       <h3>Foreign languages & cultures</h3>
     </div>
@@ -102,8 +115,8 @@
       </div></p>
     </div>
   </div>
-  <div class="panel panel-default">
-  <img class ="img-circle img-responsive center-block text-justify pull-right" src="../data/insapp.png" id="educpic">
+  <div class="panel panel-default case">
+    <img class ="img-circle img-responsive center-block text-justify pull-right" src="../data/insapp.png" id="educpic">
     <div class="panel-title">
       <h3>INSAPP</h3>
     </div>
@@ -112,8 +125,8 @@
       </div></p>
     </div>
   </div>
-  <div class="panel panel-default">
-  <img class ="img-circle img-responsive center-block text-justify pull-left" src="../data/insalan.jpg" id="educpic">
+  <div class="panel panel-default case">
+    <img class ="img-circle img-responsive center-block text-justify pull-left" src="../data/insalan.jpg" id="educpic">
     <div class="panel-title">
       <h3>InsaLan</h3>
     </div>
@@ -128,4 +141,18 @@
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
 <!-- Include all compiled plugins (below), or include individual files as needed -->
 <script src="../js/bootstrap.min.js"></script>
+<script>
+  var originalColors = [];
+
+// Changes color on hover
+$(function() {
+  $('.case').hover(function(){
+    originalColors[$(this).index('.case')] = $(this).css('background-color');
+    $(this).css('background-color', '#f0f0f0');
+  },
+  function(){
+   $(this).css('background-color', originalColors[$(this).index('.case')]);
+ });
+});
+</script>
 </html>

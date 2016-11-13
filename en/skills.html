@@ -1,5 +1,10 @@
 <!DOCTYPE html>
 <html>
+<meta charset="UTF-8">
+<meta name="description" content="Guillaume Courtet's website">
+<meta name="keywords" content="Guillaume, Courtet, Resume, Website, INSA, Rennes, student, engineer">
+<meta name="author" content="Guillaume Courtet">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
 <head>
   <title>Guillaume Courtet - Welcome </title>
@@ -71,6 +76,14 @@
           </li>
         </ul>
         <ul class="nav navbar-nav navbar-right">
+          <li>
+            <a href="mailto:guillaume.courtet@hotmail.fr">
+              <div>
+                <span class="glyphicon glyphicon-envelope" aria-hidden="true"></span>
+                <span class="sr-only">Contact me</span>
+              </div>
+            </a>
+          </li>
           <li class="dropdown">
             <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="true">Language <span class="caret"></span></a>
             <ul class="dropdown-menu">
@@ -85,7 +98,7 @@
 
   <div class="row">
     <div class="col-sm-6 col-md-3">
-      <div class="thumbnail">
+      <div class="thumbnail case">
         <img class ="img-responsive center-block" src="../data/java.png" id="skill">
         <div class="caption text-center">
           <h3>Java</h3>
@@ -94,7 +107,7 @@
       </div>
     </div>
     <div class="col-sm-6 col-md-3">
-      <div class="thumbnail">
+      <div class="thumbnail case">
         <img class ="img-responsive center-block" src="../data/c.png" id="skill">
         <div class="caption text-center">
           <h3>C</h3>
@@ -103,7 +116,7 @@
       </div>
     </div>
     <div class="col-sm-6 col-md-3">
-      <div class="thumbnail">
+      <div class="thumbnail case">
         <img class ="img-responsive center-block" src="../data/swift.png" id="skill">
         <div class="caption text-center">
           <h3>Swift</h3>
@@ -112,7 +125,7 @@
       </div>
     </div>
     <div class="col-sm-6 col-md-3">
-      <div class="thumbnail">
+      <div class="thumbnail case">
         <img class ="img-responsive center-block" src="../data/html.png" id="skill">
         <div class="caption text-center">
           <h3>HTML</h3>
@@ -124,7 +137,7 @@
 
   <div class="row">
     <div class="col-sm-6 col-md-3">
-      <div class="thumbnail">
+      <div class="thumbnail case">
         <img class ="img-responsive center-block" src="../data/css.png" id="skill">
         <div class="caption text-center">
           <h3>CSS</h3>
@@ -133,7 +146,7 @@
       </div>
     </div>
     <div class="col-sm-6 col-md-3">
-      <div class="thumbnail">
+      <div class="thumbnail case">
         <img class ="img-responsive text-center" src="../data/sql.png" id="skill">
         <div class="caption text-center">
           <h3>SQL</h3>
@@ -142,7 +155,7 @@
       </div>
     </div>
     <div class="col-sm-6 col-md-3">
-      <div class="thumbnail">
+      <div class="thumbnail case">
         <img class ="img-responsive center-block" src="../data/git.png" id="skill">
         <div class="caption text-center">
           <h3>Git</h3>
@@ -151,7 +164,7 @@
       </div>
     </div>
     <div class="col-sm-6 col-md-3">
-      <div class="thumbnail">
+      <div class="thumbnail case">
         <img class ="img-responsive center-block" src="../data/unix.png" id="skill">
         <div class="caption text-center">
           <h3>Unix + Perl</h3>
@@ -163,7 +176,7 @@
 
   <div class="row">
     <div class="col-sm-6 col-md-3">
-      <div class="thumbnail">
+      <div class="thumbnail case">
         <img class ="img-responsive center-block" src="../data/france.png" id="skill">
         <div class="caption text-center">
           <h3>French</h3>
@@ -172,7 +185,7 @@
       </div>
     </div>
     <div class="col-sm-6 col-md-3">
-      <div class="thumbnail">
+      <div class="thumbnail case">
         <img class ="img-responsive center-block" src="../data/uk.png" id="skill">
         <div class="caption text-center">
           <h3>English</h3>
@@ -181,7 +194,7 @@
       </div>
     </div>
     <div class="col-sm-6 col-md-3">
-      <div class="thumbnail">
+      <div class="thumbnail case">
         <img class ="img-responsive center-block" src="../data/motivation.png" id="skill">
         <div class="caption text-center">
           <h3>Motivation</h3>
@@ -190,7 +203,7 @@
       </div>
     </div>
     <div class="col-sm-6 col-md-3">
-      <div class="thumbnail">
+      <div class="thumbnail case">
         <img class ="img-responsive center-block" src="../data/team.png" id="skill">
         <div class="caption text-center">
           <h3>Teamwork</h3>
@@ -207,4 +220,18 @@
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
 <!-- Include all compiled plugins (below), or include individual files as needed -->
 <script src="../js/bootstrap.min.js"></script>
+<script>
+  var originalColors = [];
+
+// Changes border on hover
+$(function() {
+  $('.case').hover(function(){
+    originalColors[$(this).index('.case')] = $(this).css('border');
+    $(this).css('border', '1px solid #000');
+  },
+  function(){
+   $(this).css('border', originalColors[$(this).index('.case')]);
+ });
+});
+</script>
 </html>
