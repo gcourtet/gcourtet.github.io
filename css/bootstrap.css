@@ -1159,18 +1159,20 @@ img {
 #myself {
   height: auto; 
   width: auto; 
-  max-width: 250px; 
-  max-height: 250px;
+  max-width: 100%; 
+  max-height: 100%;
 }
 #skill {
-  width: 200px; 
-  height: 200px;
+  height: auto; 
+  width: auto; 
+  max-width: 100%; 
+  max-height: 100%;
 }
 #educpic {
   height: auto; 
   width: auto; 
-  max-width: 175px; 
-  max-height: 175px;
+  max-width: 100%; 
+  max-height: 100%;
   margin-right: 10px;
   margin-left: 10px;
   margin-top: 10px;
