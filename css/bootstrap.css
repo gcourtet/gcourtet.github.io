@@ -12,6 +12,20 @@
 body {
   margin: 0;
 }
+.my-body {
+  display: table;
+  position: absolute;
+  height: 98%;
+  width: 100%;
+}
+.my-footer{
+  display: table-footer-group;
+}
+
+.my-jumbotron {
+ display: table-cell;
+ vertical-align: middle;
+}
 article,
 aside,
 details,
@@ -22,7 +36,7 @@ footer{
   bottom:0;
   background: white;
   width:100%;
-  height:25px;
+  height:5%;
 }
 header,
 hgroup,
@@ -5028,6 +5042,14 @@ a.badge:focus {
   .jumbotron {
     padding-top: 48px;
     padding-bottom: 48px;
+  }
+  .my-jumbotron-text {
+    margin-left: 10%;
+    margin-right: 10%;
+  }
+  .my-case{
+    margin-left: 10%;
+    margin-right: 10%;
   }
   .container .jumbotron,
   .container-fluid .jumbotron {
